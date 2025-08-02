@@ -18,7 +18,9 @@ jobs:
           node-version: '16'
 
       - name: Install dependencies
-        run: npm install
+        # يثبت كافة الحزم حسب package-lock.json
+        run: npm ci
 
       - name: Run ESLint
-        run: npx eslint . --ext .js --config .eslintrc.js --config .eslintrc.js
+        # يشغل ESLint باستخدام الإعدادات في .eslintrc.js
+        run: npx eslint . --ext .js
