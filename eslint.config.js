@@ -1,4 +1,4 @@
-﻿module.exports = {
+module.exports = {
   root: true,
   env: { es6: true, browser: true, node: false },
   globals: {
@@ -10,6 +10,9 @@
     HtmlService: 'readonly',
     Logger: 'readonly'
   },
-  extends: 'eslint:recommended',
-  rules: { 'no-unused-vars': 'off', 'no-undef': 'off' }
+  extends: ['eslint:recommended'],
+  rules: {
+    'no-unused-vars': 'off',
+    'no-undef': 'off'
+  }
 };
